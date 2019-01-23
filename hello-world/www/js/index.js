@@ -43,6 +43,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+        document.querySelector('.hello-world').classList.remove('hello-world');
 
         console.log('Received Event: ' + id);
     }
