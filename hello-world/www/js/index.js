@@ -50,8 +50,9 @@ var app = {
 
     function onBatteryStatus(status) {
       const batteryLevel = document.getElementById('battery');
-      batteryLevel.innerHTML = `Battery level: ${status.level}`;
+      batteryLevel.innerHTML = `Battery level: ${status.level}  Plugged: ${status.isPlugged} Device Version: ${device.cordova}` ;
       console.log("Level: " + status.level + " isPlugged: " + status.isPlugged);
+      console.log(device.cordova);
     }
 
     var model = device.model;
