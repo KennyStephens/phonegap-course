@@ -39,21 +39,54 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <script src="../www/js/jquery1.11.1.js"></script>
-    <script src="../www/js/jquerymobile.js"></script>
+    <link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+    <script type="text/javascript" src="/js/jquery1.11.1.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
     <title>Hello World</title>
 </head>
 
 <body>
-    <div class="app">
-        <h1>PhoneGap</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">What is going on, homie?</p>
-            <h1 class="hello-world">Hello World</h1>
-            <h1 id="battery"></h1>
+
+    <section id="home" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>Home</h1>
+            <a href="#home" class="ui-btn">Home</a>
+            <a href="#page2" class="ui-btn-right">Page 2</a>
+        </header>
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">What is going on, homie?</p>
+                <h1 class="hello-world">Hello World</h1>
+                <h1 id="battery"></h1> -->
+            </div>
+
         </div>
-    </div>
+        <footer data-role="footer" data-position="fixed">
+            <h4>Footer</h4>
+        </footer>
+    </section>
+
+    <section id="page2" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>Page 2</h1>
+            <a href="#home" class="ui-btn">Home</a>
+            <a href="#page2" class="ui-btn-right">Page 2</a>
+        </header>
+        <div class="app">
+            <h1>Mumbo Jumob</h1>
+        </div>
+
+        </div>
+        <footer data-role="footer" data-position="fixed">
+            <h4>Footer</h4>
+        </footer>
+    </section>
+
+
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
@@ -62,3 +95,5 @@
 </body>
 
 </html>
+
+<!-- add jquery mobil css 1.4.5-->
