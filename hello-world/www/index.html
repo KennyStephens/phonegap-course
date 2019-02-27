@@ -46,7 +46,7 @@
 </head>
 
 <body>
-
+    <!-- Home Page -->
     <section id="home" data-role="page">
         <header data-role="header" data-position="fixed">
             <h1>Home</h1>
@@ -69,19 +69,122 @@
         </footer>
     </section>
 
+    <!-- Page Two -->
     <section id="page2" data-role="page">
         <header data-role="header" data-position="fixed">
-            <h1>Page 2</h1>
-            <a href="#home" class="ui-btn">Home</a>
-            <a href="#page2" class="ui-btn-right">Page 2</a>
+            <h1>Forms</h1>
+            <a href="#home" class="ui-btn ui-btn-left">Back</a>
+            <a href="#page3" class="ui-btn ui-btn-right">Page 3</a>
         </header>
-        <div class="app">
-            <h1>Mumbo Jumbo</h1>
+
+        <div class="ui-content">
+            <h1>Form Practice</h1>
+            <!-- Form -->
+            <form action="" method="get">
+                <label for="basicfield">Basic Text Field</label>
+                <input type="text" name="basicfield" id="basicfield" value="" placeholder="Placeholder Text">
+
+                <label for="username" class="ui-hidden-accessible">Your Name:</label>
+                <input type="text" name="username" id="username" value="" placeholder="Your Name">
+
+                <div class="ui-field-contain">
+                    <label for="address">Your Address:</label>
+                    <input type="text" name="address" id="address" value="" placeholder="Your Address">
+                </div>
+            </form>
         </div>
 
+        <footer data-role="footer" data-position="fixed">
+            <h4>Footer</h4>
+            <a href="#home" class="ui-btn ui-btn-left">Home</a>
+        </footer>
+    </section>
+
+    <!-- Page Three -->
+    <section id="page3" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>Buttons</h1>
+            <a href="#page2" class="ui-btn ui-btn-left">Back</a>
+            <a href="#page4" class="ui-btn ui-btn-right">Page 4</a>
+        </header>
+
+        <div class="ui-content">
+            <!-- BUTTONS -->
+            <!-- styling a link as a button -->
+            <h1>Buttons</h1>
+            <p>This is a link styled as a button:</p>
+            <a href="#" class="ui-btn">Link Button</a>
+            <a href="#" class="ui-btn ui-mini">Link Button</a>
+            <!-- automatic conversion of a button element -->
+            <p>This is a &lt;button&gt; element:</p>
+            <button id="btn1" class="ui-btn" disabled="disabled">button element</button>
+            <button id="btn2" class="ui-btn ui-mini">button element mini</button>
+            <!-- input elements -->
+            <p>&lt;input&gt; elements:</p>
+            <input type="button" value="Button" />
+            <!-- vertical vs. inline buttons -->
+            <p>100% Horizontal vs. Inline buttons:</p>
+            <a href="#" class="ui-btn">Button 1</a>
+            <a href="#" class="ui-btn ui-shadow">Button 2</a>
+            <a href="#" class="ui-btn ui-btn-inline">Button 3</a>
+            <a href="#" class="ui-btn ui-btn-inline">Button 4</a>
+            <!-- grouping buttons together in a controlgroup -->
+            <p>These buttons are part of a control group:</p>
+            <div data-role="controlgroup" data-type="horizontal">
+                <button class="ui-btn">button a</button>
+                <button class="ui-btn">button b</button>
+                <button class="ui-btn">button c</button>
+            </div>
+            <!-- buttons with icons -->
+            <a href="#" class="ui-btn ui-icon-arrow-u ui-btn-icon-top">Up</a>
+            <a href="#" class="ui-btn ui-icon-arrow-d ui-btn-icon-bottom">Down</a>
+            <a href="#" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">Left</a>
+            <a href="#" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">Right</a>
+            <a href="#" class="ui-btn ui-icon-delete ui-corner-all ui-btn-icon-notext">Delete</a>
+            <!-- END BUTTONS -->
         </div>
         <footer data-role="footer" data-position="fixed">
             <h4>Footer</h4>
+            <a href="#home" class="ui-btn ui-btn-left">Home</a>
+        </footer>
+    </section>
+
+    <!-- Page Four -->
+    <section id="page4" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>Input Controls</h1>
+            <a href="#page3" class="ui-btn ui-btn-left">Back</a>
+            <a href="#page5" class="ui-btn ui-btn-right">Page 5</a>
+        </header>
+
+        <div class="ui-content">
+            <!-- INPUTS -->
+            <form method="get" action="">
+                <fieldset class="ui-field-contain">
+                    <label for="address">Your Address:</label>
+                    <input type="text" name="address" id="address" value="" placeholder="Your Address" />
+                    <label for="age">Your Age:</label>
+                    <input type="number" name="age" id="age" value="" placeholder="Your Age" />
+                    <label for="email">Your email: </label>
+                    <input type="email" name="email" id="email" value="" placeholder="Your Email" />
+                    <label for="birthdate">Your birthdate: </label>
+                    <input type="date" name="birthdate" id="birthdate" value="" placeholder="Your Birthdate" />
+                </fieldset>
+                <div class="ui-field-contain">
+                    <label for="search">Search the site:</label>
+                    <input type="search" name="search" id="search" value="" placeholder="Search the site" />
+                </div>
+                <div class="ui-field-contain">
+                    <label for="details">Tell us about you!</label>
+                    <textarea id="details"></textarea>
+                </div>
+            </form>
+            <!-- END INPUTS -->
+        </div>
+
+        <footer data-role="footer" data-position="fixed">
+            <h4>Footer</h4>
+            <a href="#home" class="ui-btn ui-btn-left">Home</a>
         </footer>
     </section>
 
