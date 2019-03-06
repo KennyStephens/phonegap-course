@@ -158,29 +158,221 @@
         </header>
 
         <div class="ui-content">
-                <!-- INPUTS -->
-                <form method="get" action="">
-                  <fieldset class="ui-field-contain">
+            <!-- INPUTS -->
+            <form method="get" action="">
+                <fieldset class="ui-field-contain">
                     <label for="address">Your Address:</label>
-                    <input type="text" name="address" id="address" value="" placeholder="Your Address"/>
+                    <input type="text" name="address" id="address" value="" placeholder="Your Address" />
                     <label for="age">Your Age:</label>
-                    <input type="number" name="age" id="age" value="" placeholder="Your Age"/>
+                    <input type="number" name="age" id="age" value="" placeholder="Your Age" />
                     <label for="email">Your email: </label>
-                    <input type="email" name="email" id="email" value="" placeholder="Your Email"/>
+                    <input type="email" name="email" id="email" value="" placeholder="Your Email" />
                     <label for="birthdate">Your birthdate: </label>
-                    <input type="date" name="birthdate" id="birthdate" value="" placeholder="Your Birthdate"/>
-                  </fieldset>
-                  <div class="ui-field-contain">
+                    <input type="date" name="birthdate" id="birthdate" value="" placeholder="Your Birthdate" />
+                </fieldset>
+                <div class="ui-field-contain">
                     <label for="search">Search the site:</label>
-                    <input type="search" name="search" id="search" value="" placeholder="Search the site"/>
-                  </div>
-                  <div class="ui-field-contain">
+                    <input type="search" name="search" id="search" value="" placeholder="Search the site" />
+                </div>
+                <div class="ui-field-contain">
                     <label for="details">Tell us about you!</label>
                     <textarea id="details"></textarea>
-                  </div>
-                </form>
-                <!-- END INPUTS -->
-              </div>
+                </div>
+            </form>
+            <!-- END INPUTS -->
+        </div>
+
+        <footer data-role="footer" data-position="fixed">
+            <h4>Footer</h4>
+            <a href="#home" class="ui-btn ui-btn-left">Home</a>
+        </footer>
+    </section>
+
+    <!-- Page Five -->
+    <section id="page5" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>Radio Buttons and Checkboxes</h1>
+            <a href="#page4" class="ui-btn ui-btn-left">Back</a>
+            <a href="#page6" class="ui-btn ui-btn-right">Page 6</a>
+        </header>
+
+        <div class="ui-content">
+            <!-- RADIOS AND CHECKS -->
+            <form method="get" action="">
+                <fieldset data-role="controlgroup">
+                    <legend>Select an option:</legend>
+                    <label for="rb1">Radio Button 1</label>
+                    <input type="radio" name="rb" id="rb1" value="rb1" />
+                    <label for="rb2">Radio Button 2</label>
+                    <input type="radio" name="rb" id="rb2" value="rb2" checked="checked" />
+                    <label for="rb3">Radio Button 3</label>
+                    <input type="radio" name="rb" id="rb3" value="rb3" />
+                    <label for="rb4">Radio Button 4</label>
+                    <input type="radio" name="rb" id="rb4" value="rb4" />
+                </fieldset>
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Select an option:</legend>
+                    <label for="rb5">Option 1</label>
+                    <input type="radio" name="rbtn" id="rb5" value="rb5" checked="checked" />
+                    <label for="rb6">Option 2</label>
+                    <input type="radio" name="rbtn" id="rb6" value="rb6" />
+                    <label for="rb7">Option 3</label>
+                    <input type="radio" name="rbtn" id="rb7" value="rb7" />
+                </fieldset>
+                <fieldset data-role="controlgroup">
+                    <legend>Agree to the terms:</legend>
+                    <label for="cb1">I agree</label>
+                    <input type="checkbox" name="cb1" id="cb1" />
+                </fieldset>
+                <fieldset data-role="controlgroup">
+                    <legend>Choose Programming Fuel:</legend>
+                    <label for="pf1">Red Bull</label>
+                    <input type="checkbox" name="pf1" id="pf1" />
+                    <label for="pf2">Mountain Dew</label>
+                    <input type="checkbox" name="pf2" id="pf2" />
+                    <label for="pf3">Dr. Pepper</label>
+                    <input type="checkbox" name="pf3" id="pf3" />
+                </fieldset>
+            </form>
+        </div>
+        <!-- END RADIOS AND CHECKS -->
+        <footer data-role="footer" data-position="fixed">
+            <h4>Footer</h4>
+            <a href="#home" class="ui-btn ui-btn-left">Home</a>
+        </footer>
+    </section>
+
+    <!-- Page Six -->
+    <section id="page6" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>Slider and Flipswitch</h1>
+            <a href="#page5" class="ui-btn ui-btn-left">Back</a>
+            <a href="#page7" class="ui-btn ui-btn-right">Page 7</a>
+        </header>
+
+        <div class="ui-content">
+            <!-- SLIDERS AND FLIPSWITCHES -->
+            <form method="get" action="">
+                <fieldset class="ui-field-contain">
+                    <legend>Numerical Slider Example</legend>
+                    <label for="num">Enter a Number</label>
+                    <input type="range" name="num" id="num" value="25" min="0" max="100" />
+                </fieldset>
+            </form>
+            <form method="get" action="">
+                <fieldset class="ui-field-contain">
+                    <label for="ts1">Flipswitch:</label>
+                    <select name="ts1" id="ts1" data-role="flipswitch">
+                        <option value="No" selected="selected">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </fieldset>
+                <fieldset class="ui-field-contain">
+                    <label for="ts2">Flipswitch:</label>
+                    <input name="ts2" type="checkbox" checked="checked" data-role="flipswitch" />
+                </fieldset>
+            </form>
+            <!-- END SLIDERS AND FLIPSWITCHES -->
+        </div>
+
+        <footer data-role="footer" data-position="fixed">
+            <h4>Footer</h4>
+            <a href="#home" class="ui-btn ui-btn-left">Home</a>
+        </footer>
+    </section>
+
+    <!-- Page Seven -->
+    <section id="page7" data-role="page">
+        <header data-role="header" data-position="fixed">
+            <h1>Select Lists</h1>
+            <a href="#page6" class="ui-btn ui-btn-left">Back</a>
+            <a href="#page8" class="ui-btn ui-btn-right">Page 8</a>
+        </header>
+
+        <div class="ui-content">
+            <!-- SELECT LISTS -->
+            <form method="get" action="">
+                <fieldset class="ui-field-contain">
+                    <label for="select1">Basic Select Menu:</label>
+                    <select name="select1" id="select1">
+                        <option value="value1">Value 1</option>
+                        <option value="value2" disabled="disabled">Value 2</option>
+                        <option value="value3">Value 3</option>
+                        <option value="value4">Value 4</option>
+                    </select>
+                </fieldset>
+            </form>
+
+            <form method="get" action="">
+                <fieldset class="ui-field-contain">
+                    <label for="select1">Custom Select Menu:</label>
+                    <select name="select1" id="select1" data-native-menu="false">
+                        <option>Choose One:</option>
+                        <optgroup label="First Group">
+                            <option value="value1">Value 1</option>
+                            <option value="value2" disabled="disabled">Value 2</option>
+                            <option value="value3">Value 3</option>
+                            <option value="value4">Value 4</option>
+                        </optgroup>
+                        <optgroup label="Second Group">
+                            <option value="value5">Value 5</option>
+                            <option value="value6">Value 6</option>
+                            <option value="value7">Value 7</option>
+                            <option value="value8">Value 8</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+
+                <fieldset class="ui-field-contain">
+                    <label for="select1">Multiple Enabled:</label>
+                    <select name="select1" id="select2" multiple="multiple" data-native-menu="false">
+                        <option>Select Options:</option>
+                        <option value="value1">Value 1</option>
+                        <option value="value2">Value 2</option>
+                        <option value="value3">Value 3</option>
+                        <option value="value4">Value 4</option>
+                        <option value="value5">Value 5</option>
+                        <option value="value6">Value 6</option>
+                    </select>
+                </fieldset>
+            </form>
+
+            <form method="get" action="">
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <legend>Expiration Date:</legend>
+
+                        <label for="month">Select Month</label>
+                        <select name="month" id="month">
+                            <option value="Jan">January</option>
+                            <option value="Feb">February</option>
+                            <option value="Mar">March</option>
+                            <option value="Apr">April</option>
+                            <option value="May">May</option>
+                            <option value="Jun">June</option>
+                            <option value="Jul">July</option>
+                            <option value="Aug">August</option>
+                            <option value="Sep">September</option>
+                            <option value="Oct">October</option>
+                            <option value="Nov">November</option>
+                            <option value="Dec">December</option>
+                        </select>
+
+                        <label for="year">Select Year</label>
+                        <select name="year" id="year">
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                        </select>
+                    </fieldset>
+                </div>
+            </form>
+            <!-- END SELECT LISTS -->
+        </div>
 
         <footer data-role="footer" data-position="fixed">
             <h4>Footer</h4>
