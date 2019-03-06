@@ -10,6 +10,21 @@
     #homeBanner {
       width: 100%;
     }
+
+    .header-image {
+      background-image: url("./imgs/sample-app-header.jpg");
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .header-image h1, .header-image h3 {
+      color: #fff;
+      font-weight: 400;
+      text-shadow: none;
+    }
     
     .center {
       text-align: center;
@@ -31,8 +46,7 @@
     #map2 {
       margin-left: auto;
       margin-right: auto;
-      width: 320px;
-      height: 320px;
+      width: 100%;
     }
   </style>
   <script src="js/jquery.js"></script>
@@ -41,21 +55,26 @@
 </head>
 
 <body>
-  
+
   <div id="homeScreen" data-role="page">
     <div class="app">
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-                <p class="battery-status">LOOK</p>
-            </div>
-        </div>
-    <img src="imgs/SAMOCA_banner_1.png" class="banner" />
+      <div id="deviceready" class="blink">
+        <p class="event listening">Connecting to Device</p>
+        <p class="event received"></p>
+        <!-- <p class="battery-status"></p> -->
+      </div>
+    </div>
+    <div class="header-image">
+      <h1>Sample App</h1>
+      <h3>This is my sample app</h3>
+    </div>
     <div data-role="content">
       <ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
         <li><a href="#currentExhibits">Current Exhibits</a></li>
         <li><a href="#pastExhibits">Past Exhibits</a></li>
         <li><a href="">Calendar of Events</a></li>
+        <li><a href="#famousArtists">Famous Artists</a></li>
+        <li><a href="#featuredPainting">Featured Painting</a></li>
         <li><a href="#discoverScreen">[ Discover ]</a></li>
 
       </ul>
@@ -66,6 +85,7 @@
         <div class="ui-block-b">
           <a href="#mapScreen" class="ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Map</a>
         </div>
+        <p class="battery-status">LOOK</p>
       </div>
     </div>
   </div>
@@ -142,16 +162,65 @@
     </div>
   </div>
 
-  <div id="mapScreen" data-role="page">
+  <!-- Famous Artists -->
+  <div id="famousArtists" data-role="page">
     <header data-role="header" data-position="fixed" data-id="appHeader">
-      <h1>SAMOCA</h1>
+      <h1>Famous Artists</h1>
       <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
     </header>
     <div data-role="content">
-      <h2 class="center">San Angelico Museum of Contemporary Art</h2>
-      <p class="center">123 Main Street Ventura, CA 12345
+      <p style="padding-bottom: 15px;">There are too many famous artists to list here, but here are some of our
+        favorites that will be featured in
+        future exhibits.</p>
+      <ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+        <li>
+          <h2>Pablo Picasso</h2>
+        </li>
+        <li>
+          <h2>Vincent van Gogh</h2>
+        </li>
+        <li>
+          <h2>Andy Warhol</h2>
+        </li>
+        <li>
+          <h2>Leonardo da Vinci</h2>
+        </li>
+        <li>
+          <h2>Frida Kahlo</h2>
+        </li>
+        <li>
+          <h2>Claude Monet</h2>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Featured Painting -->
+  <div id="featuredPainting" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>Vincent van Gogh</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h1>Featured Painting</h1>
+      <p style="padding-bottom: 15px;">Starry Night is a staple in classical painting perfection. For this reason it is
+        our feature painting of the week.</p>
+      <img class="center banner" src="./imgs/starry-night.jpg" alt="Starry Night">
+    </div>
+  </div>
+
+
+
+  <div id="mapScreen" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>Utah Museum of Fine Arts</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h2 class="center">Utah Museum of Fine Arts</h2>
+      <p class="center">410 Campus Center Drive SLC, Utah 84112
         <br>(800)555-1212</p>
-      <div id="map2"><img src="imgs/map.png" /></div>
+      <div id="map2" class="banner center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.083005837194!2d-111.8453906848364!3d40.76019904260273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87525fed0a2ef851%3A0xcfc7b78c241773ed!2sUtah+Museum+of+Fine+Arts!5e0!3m2!1sen!2sus!4v1551844945552" width="100%" height="300px" frameborder="0" style="border:0" allowfullscreen></iframe></div>
     </div>
   </div>
 
@@ -163,25 +232,25 @@
     <div data-role="content">
       <img id="qrcode" src="imgs/qr.png" />
       <h3 class="center">Discover More Exciting Stories</h3>
-      <p class="center">Any time you see this QR code, scan it using the Discover button to see additional content from SAMOCA.</p>
+      <p class="center">Any time you see this QR code, scan it using the Discover button to see additional content from
+        SAMOCA.</p>
       <a id="qrScanBtn" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Discover</a>
     </div>
   </div>
 
   <div id="aboutScreen" data-role="page">
     <header data-role="header" data-position="fixed" data-id="appHeader">
-      <h1>SAMOCA</h1>
+      <h1>Local Museum Spotlight</h1>
       <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
     </header>
     <div data-role="content">
-      <h2 class="center">San Angelico Museum of Contemporary Art</h2>
-      <h3 class="center">Celebrating the Best of Modern Art</h3>
-      <img class="center banner" src="imgs/Museum.png" />
-      <p>SAMOCA (San Angelico Museum of Contemporary Art) is an art museum with a focus on modern art from the last 75 years. Since its inception in 1973, the museum has been the leader of modern contemporary design. SAMOCA is located in the heart of Ventura, ninety miles north of Los Angeles in Southern California.</p>
+      <h2 class="center">The Utah Museum of Fine Arts</h2>
+      <h3 class="center">The Utah Museum of Fine Arts (UMFA) at the University of Utah is your destination for global visual arts.</h3>
+      <img class="center banner" src="imgs/museum-of-fine-arts.jpeg" />
+      <p>The Utah Museum of Fine Arts (UMFA) at the University of Utah is your destination for global visual arts. From ancient objects to the latest contemporary works, the UMFA galleries—reimagined and remodeled in 2017—showcase the breadth and depth of human history and creativity. The Museum’s collection of nearly 20,000 original works of art is the most dynamic in the region. As the fine arts museum for both the state and the University, the UMFA is a vibrant hub for cultural exchange among campus and community audiences.</p>
 
-      <p>SAMOCA was established to promote the celebration of modern art in many forms including visual and performing arts, music, and crafts – with collections that are suitable for the entire family. The museum focuses on the unique talents and accomplishments of up-and-coming artists found within the forward-thinking California community and beyond.</p>
+      <p>What’s in it for you? A wake-up call for your senses, a conversation starter, a fresh take on the world—through ongoing exhibitions drawn from the permanent collection, temporary exhibitions from around the world, talks and panel discussions by renowned artists and thinkers, gallery tours, art making and other creative activities for families and adults, films and lectures, resources for U of U students and faculty, and award-winning outreach to K–12 teachers and schools around the state.</p>
 
-      <p>Our collections are designed to highlight the importance of contemporary art within modern society. Important influences, such as pop, cinema, and current events, permeate our halls. Through our diverse collections, events, and with the support of our patrons and volunteers, the museum helps to promote the importance of modern art around the world.</p>
       <p class="center">123 Main Street Ventura, CA 12345 (800) 555-1212</p>
     </div>
   </div>
@@ -193,9 +262,9 @@
 	Volunteer
 	-->
   <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript">
-        app.initialize();
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript">
+    app.initialize();
   </script>
 </body>
 

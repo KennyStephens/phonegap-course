@@ -36,5 +36,5 @@ var app = {
 
 function onBatteryStatus(status) {
     console.log("Level: " + status.level + " isPlugged: " + status.isPlugged);
-    $('.battery-status').text("Battery Level: " + status.level + "% Plugged in: " + status.isPlugged);
+    $('.battery-status').text("Battery Level: " + status.level + "%");
 }
